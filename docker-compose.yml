@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  dhcp:
+    image: "networkboot/dhcpd"
+    networks:
+      - illumosaarchdev
+    volumes:
+      - "./dhcp-data:/data"
+
+  tftp:
+    image: "pghalliday/tftp"
+    networks:
+      illumosaarchdev:
+        ipv4_address: 192.168.0.34
+    volumes:
+      - "./output/proto:/var/tftpboot"
+
+  nfs_root:
+    image: "erichough/nfs-server"
+    networks:
+      illumosaarchdev:
+        ipv4_address: 192.168.0.35
+    volumes:
+      - "./nfs-data/exports:/etc/exports:ro"
+      - "./output:/data:rw"
+    cap_add:
+      - SYS_ADMIN
+
+  qemu_aarch64:
+    build: "./qemu-installer"
+    networks:
+      - "illumosaarchdev"
+    volumes:
+      - "./:/data:rw"
+    cap_add:
+      - ALL
+    depends_on:
+      - nfs_root
+      - tftp
+      - dhcp
+    devices:
+      - "/dev/net/tun:/dev/net/tun"
+
+networks:
+    illumosaarchdev:
+        # use the bridge driver, but enable IPv6
+        driver: bridge
+        ipam:
+            driver: default
+            config:
+                - subnet: 192.168.0.0/24

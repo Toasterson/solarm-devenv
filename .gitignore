@@ -1,0 +1,4 @@
+output
+disk-*.img
+**/*.leases
+**/*.leases~

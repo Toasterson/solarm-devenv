@@ -1,0 +1,6 @@
+[submodule "illumos-build"]
+	path = illumos-build
+	url = https://github.com/n-hys/illumos-build
+[submodule "illumos-gate"]
+	path = illumos-gate
+	url = https://github.com/n-hys/illumos-gate.git

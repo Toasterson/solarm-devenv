@@ -1,0 +1,3 @@
+/data/proto/root_aarch64        *(rw,no_root_squash,insecure,sync,no_subtree_check)
+#/data/proto/root_alpha          *(rw,no_root_squash,insecure,sync,no_subtree_check)
+#/data/proto/root_riscv64        *(rw,no_root_squash,insecure,sync,no_subtree_check)
