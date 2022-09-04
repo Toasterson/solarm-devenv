@@ -2,9 +2,9 @@
 This repo is the official upstreaming and development project for illumos on ARM processors and platforms. This repo included a hosting development environment setup and the automations to get you going to develop.
 
 This Repository contains the following parts:
-- A VM to host the services required to run the Network boot Environment vis NFS [README](./netsvc-vm/README.md)
-- The OpenSolaris Porting Project sources as Subrepo [README](./illumos-gate/README.md)
-- The OpenSolaris Porting Project build container [README](./illumos-build/README.md)
+- A VM to host the services required to run the Network boot Environment vis NFS
+- The OpenSolaris Porting Project sources as Subrepo [illumos-gate](https://github.com/n-hys/illumos-gate)
+- The OpenSolaris Porting Project build container [illumos-build](https://github.com/n-hys/illumos-build)
 - Qemu Emulator and scripts/guides to run qemu-aarch64 [README](./qemu-installer/README.md)
 
 To get started first follow the instructions in the build container or use the provided shellscripts
