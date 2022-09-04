@@ -2,3 +2,4 @@ output
 disk-*.img
 **/*.leases
 **/*.leases~
+illumos-gate

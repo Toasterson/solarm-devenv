@@ -1,0 +1,17 @@
+%HOME           %{expand:%%(echo $HOME)}
+%TOAST_BASE     opt/toast
+%_topdir        %{HOME}/devel/rpms
+%_prefix        /%{TOAST_BASE}
+%_libexecdir    %{_libdir}
+%_sysconfdir    /etc%{TOAST_BASE}
+%_localstatedir /var/%{TOAST_BASE}
+%_defaultdocdir /%{TOAST_BASE}/share/doc
+%vendor         Toasterson 
+%_mandir        /%{TOAST_BASE}/share/man
+%_infodir       /%{TOAST_BASE}/share/info
+%__printf       /usr/bin/printf
+%__python       /%{_bindir}/python
+%_signature     gpg
+%_gpg_path      %{HOME}/.gnupg
+%__gpg          /usr/bin/gpg2
+%_gpg_name      %{vendor}
