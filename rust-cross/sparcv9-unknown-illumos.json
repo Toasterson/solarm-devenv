@@ -1,0 +1,35 @@
+{
+    "arch": "sparc64",
+    "cpu": "v9",
+    "data-layout": "E-m:e-i64:64-n32:64-S128",
+    "dynamic-linking": true,
+    "eh-frame-header": false,
+    "has-rpath": true,
+    "is-like-solaris": true,
+    "late-link-args": {
+        "gcc": [
+            "-lc",
+            "-lssp"
+        ]
+    },
+    "limit-rdylib-exports": false,
+    "linker-is-gnu": false,
+    "llvm-target": "sparcv9-pc-solaris",
+    "max-atomic-width": 64,
+    "os": "illumos",
+    "pre-link-args": {
+        "gcc": [
+            "-m64",
+            "-std=c99"
+        ]
+    },
+    "supported-sanitizers": [
+        "address",
+        "cfi"
+    ],
+    "target-family": [
+        "unix"
+    ],
+    "target-pointer-width": "64",
+    "target-endian": "big"
+}

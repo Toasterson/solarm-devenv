@@ -1,0 +1,25 @@
+{
+  "arch": "sparc64",
+  "cpu": "v9",
+  "data-layout": "E-m:e-i64:64-n32:64-S128",
+  "dynamic-linking": true,
+  "eh-frame-header": false,
+  "has-rpath": true,
+  "is-like-solaris": true,
+  "limit-rdylib-exports": false,
+  "linker-is-gnu": false,
+  "llvm-target": "sparcv9-sun-solaris",
+  "max-atomic-width": 64,
+  "os": "solaris",
+  "pre-link-args": {
+    "gcc": [
+      "-m64"
+    ]
+  },
+  "target-endian": "big",
+  "target-family": [
+    "unix"
+  ],
+  "target-pointer-width": "64",
+  "vendor": "sun"
+}
